@@ -1,0 +1,206 @@
+:root {
+  --text: #060404;
+  --background: #fdfdfc;
+  --primary: #eedaaf;
+  --secondary: #cadbe8;
+  --accent: #de3d21;
+}
+
+* { box-sizing: border-box; }
+/*---------------base-----------------*/
+
+* { box-sizing: border-box; }
+#wrapper {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  margin-block: 0 auto;
+}
+header {
+  background-color: var(--secondary);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8vh;
+
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+header h1 {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 6vw;
+  margin:0;
+  color: var(--background); 
+}
+nav ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center;
+  gap: 50px;
+  padding: 5px;
+}
+nav li{
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 1.5em;
+  list-style: none;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.nav-wrap {
+  background: linear-gradient(0deg, var(--background), #eeeded);
+  border-radius: 2.5em;
+  padding: 0.5em 1.5em;
+  box-shadow: 0 0 0 10px #cadbe8 inset;
+
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+}
+main {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.progress {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+  color: var(--accent);
+  margin-left: 100px;
+}
+section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: .5em;
+
+  aspect-ratio: 6/3;
+  width: 100%;
+}
+section h3 {
+  padding: 1em;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: var(--primary);
+}
+footer {
+  border-top: var(--secondary) 6px solid;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 40px;
+}
+img {
+  width: 2em;
+}
+.image {
+  width: 2.25em;
+  padding-top: 5px;
+}
+
+/*-----------------links----------------*/
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--text);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+a:active {
+  text-decoration: underline;
+  color: var(--accent);
+  transition: 1ems;
+}
+a.activepage {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+/*----------------images----------------*/
+
+#goprohero {
+  background-image: url('KeyShotFile2.1 (1).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#libraHero {
+  background-image: url('Libra_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#odysseyHero {
+  background-image: url('Odyssey_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#lumiHero {
+  background-image: url('Lumi_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#email {
+  background-image: url('email-logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#LinkedIn {
+  background-image: url('linkedin-logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*------------responsive layout------------*/
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 20vw;
+  }
+  nav ul {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
+  }
+  nav li {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 1200px) {
+  header h1 {
+    text-align: center;
+    font-size: 7vw;
+  }
+  nav ul {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
+  }
+  nav li {
+    border-bottom: #ffffff 10px solid;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrap {
+    width: 100%;
+  }
+}
