@@ -17,7 +17,7 @@
   margin-block: 0 auto;
 }
 header {
-  background-color: var(--secondary);
+  background-color: var(--accent);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -32,7 +32,7 @@ header h1 {
   font-family: "Goudy Bookletter 1911", sans-serif;
   font-size: 6vw;
   margin:0;
-  color: var(--background); 
+  color: var(--background);
 }
 nav ul {
   align-items: center;
@@ -51,10 +51,10 @@ nav li{
   padding-right: 70px;
 }
 .nav-wrap {
-  background: linear-gradient(0deg, var(--background), #eeeded);
+  background: linear-gradient(0deg, var(--background), #ededed);
   border-radius: 2.5em;
   padding: 0.5em 1.5em;
-  box-shadow: 0 0 0 10px #cadbe8 inset;
+  box-shadow: 0 0 0 10px var(--background) inset;
 
   width: fit-content;
   margin: 0 auto;
@@ -67,6 +67,9 @@ main {
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 50px;
+}
+p {
+  font-family: "Goudy Bookletter 1911", sans-serif;
 }
 .progress {
   font-family: "Goudy Bookletter 1911", sans-serif;
@@ -88,6 +91,12 @@ section h3 {
   font-size: 3em;
   text-align: center;
   color: var(--primary);
+}
+div h2 {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 4em;
+  text-align: left;
+  color: var(--accent);
 }
 footer {
   border-top: var(--secondary) 6px solid;
@@ -125,6 +134,32 @@ a.activepage {
   color: var(--accent);
 }
 
+/*----------------form----------------*/
+form {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  margin-left: 2em;
+}
+textarea, input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  padding: .75em;
+  border: 1px solid #000000;
+  border-radius: 3em;
+  background-color: #ffffff;
+  margin-bottom:1.5em;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+}
+input[type="submit"] {
+  width: auto;
+  max-width: none;
+}
+label {
+  color: var(--accent);
+}
 /*----------------images----------------*/
 
 #goprohero {
@@ -179,6 +214,9 @@ a.activepage {
     padding-right: 0;
     font-size: 1.5em;
   }
+  form {
+    margin-left: 2em;
+  }
 }
 @media (max-width: 1200px) {
   header h1 {
@@ -199,8 +237,10 @@ a.activepage {
   main {
     grid-template-columns: 1fr;
   }
-
   .nav-wrap {
     width: 100%;
+  }
+  form {
+    margin-left: 4em;
   }
 }
