@@ -2,28 +2,32 @@
 <html lang="en">
     <head> 
         <meta charset="UTF-8">
+        <meta name:"description" content="Contact form to reach out. Includes fields for name, email, subject, and message.">
         <link rel="stylesheet" href="Portfolio.css">
         <title> Giselle Design::Portfolio </title>
     </head>
     <body>
         <div id="wrapper">
         <header>
-            <h1>Industrial Design Portfolio</h1>
+            <h1>Contact Me</h1>
         </header>
         <nav class="nav-wrap">
             <ul>
-                <li><a href="index.html" class="activepage">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="otherwork.html">Other Work</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="contact.html" class="activepage">Contact Me</a></li>
             </ul>
         </nav>
-        <form name="ContactForm" method="get" action="reservationsConfirmation.html" id="order">
+        <form name="ContactForm" method="get" action="contactThanks.html" id="order">
           <label for="firstName">Name</label>
           <input type="text" name="firstName" id="firstName" required>
 
           <label for="addedEmail">Email</label>
           <input type="email" name="addedEmail" id="addedEmail" required>
+          
+          <label for="addedSubject">Subject</label>
+          <input type="text" name="addedSubject" id="addedSubject" required>
 
           <label for="comments">Comments</label>
           <textarea name="comments" id="comments" required></textarea>
@@ -34,6 +38,6 @@
     <footer>
         <p>Giselle Design</p>
         <a href="https://www.linkedin.com/feed/"><img class="image" src="linkedin-logo.png" alt="Linkedin Logo"></a>
-        <a href="https://mail.google.com/mail"><img src="email-logo.png" alt="Email Logo"></a>
+        <a href="https://mail.google.com/mail"><img class="image" src="email-logo.png" alt="Email Logo"></a>
     </footer>
 </html>
