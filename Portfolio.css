@@ -3,7 +3,8 @@
   --background: #fdfdfc;
   --primary: #eedaaf;
   --secondary: #cadbe8;
-  --accent: #de3d21;
+  --accent: #7e9487;
+  border-radius: 10px;
 }
 
 * { box-sizing: border-box; }
@@ -12,7 +13,7 @@
 * { box-sizing: border-box; }
 #wrapper {
   display: block;
-  background-color: #ffffff;
+  background: var(--background);
   width: 100%;
   margin-block: 0 auto;
 }
@@ -33,6 +34,12 @@ header h1 {
   font-size: 6vw;
   margin:0;
   color: var(--background);
+}
+.pageTitle {
+  width: 100%;
+  text-align: center;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  color: var(--text);
 }
 nav ul {
   align-items: center;
@@ -70,13 +77,23 @@ main {
 }
 p {
   font-family: "Goudy Bookletter 1911", sans-serif;
-}
-.progress {
-  font-family: "Goudy Bookletter 1911", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
+  color: var(--text);
+  line-height: 1.6em;
+  padding-top: 1em;
+  margin-bottom: 1.5em;
   text-align: left;
-  color: var(--accent);
-  margin-left: 100px;
+  margin: 0 auto;
+}
+.extra {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+}
+.aboutMeContent p{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -90,26 +107,131 @@ section h3 {
   font-family: "Goudy Bookletter 1911", sans-serif;
   font-size: 3em;
   text-align: center;
-  color: var(--primary);
+  color: var(--text);
 }
-div h2 {
+.aboutMeContent h2 {
   font-family: "Goudy Bookletter 1911", sans-serif;
   font-size: 4em;
-  text-align: left;
+  text-align: center;
   color: var(--accent);
+  margin: 0 auto;
 }
 footer {
-  border-top: var(--secondary) 6px solid;
+  border-top: var(--accent) 6px solid;
   text-align: center;
   margin-top: 50px;
   border-radius: 40px;
 }
+footer {
+  border-top: var(--accent) 6px solid;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem 0;
+}
 img {
-  width: 2em;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .image {
-  width: 2.25em;
+  width: 2.5em;
+  height: auto;
   padding-top: 5px;
+  display: inline-block;
+}
+
+/* On wider screens keep footer items in a row */
+@media (min-width: 900px) {
+  footer {
+    flex-direction: column;
+  }
+}
+.nameIntroduction {
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+.AboutMeImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+}
+.AboutMeImage img {
+  /* make the profile image larger but responsive */
+  width: clamp(400px, 28vw, 420px);
+  height: auto;
+  border-radius: 0.5em;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.OtherWorksHeader {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: var(--text);
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+}
+#ThanksWrapper {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: var(--text);
+  margin-top: 10em;
+}
+.return {
+  display: block;
+  margin: 2em auto;
+  border:#de3d21 3px solid;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  width: 400px;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--accent);
+}
+.otherWorkContent {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+.GoProContent {
+  width: 70%;
+  margin: 0 auto;
+}
+.GoProContent video {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  padding: 1em;
+}
+/*-----------------table----------------*/
+
+table {
+  width: 60%;
+  border-collapse: collapse;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  margin-bottom: 2em;
+  padding-top: 2em;
+}
+th, td {
+  border: 1px solid var(--accent);
+  padding: 0.5em;
+  text-align: left;
+}
+th {
+  background-color: var(--secondary);
 }
 
 /*-----------------links----------------*/
@@ -130,16 +252,22 @@ a:active {
 }
 a.activepage {
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--accent);
 }
 
 /*----------------form----------------*/
 form {
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   font-family: "Goudy Bookletter 1911", sans-serif;
-  margin-left: 2em;
+  margin: 0 auto;
+  position: center;
+  width: 100%;
+  max-width: 500px;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 textarea, input {
   box-sizing: border-box;
@@ -148,17 +276,26 @@ textarea, input {
   display: block;
   padding: .75em;
   border: 1px solid #000000;
-  border-radius: 3em;
+  border-radius: 0.75em;
   background-color: #ffffff;
   margin-bottom:1.5em;
   font-family: "Goudy Bookletter 1911", sans-serif;
+  padding-top: 1.5em;
+  font-size: 12pt;
 }
 input[type="submit"] {
   width: auto;
   max-width: none;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 12pt;
+  padding: 0.75em 2em;
 }
 label {
   color: var(--accent);
+  padding-bottom: .25em;
 }
 /*----------------images----------------*/
 
@@ -198,6 +335,32 @@ label {
   background-position: center;
   background-repeat: no-repeat;
 }
+#myPicture {
+  background-image: url('myPicture.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Tables: center on the page and be responsive */
+table {
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  width: min(900px, 90%);
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border-radius: 0.5rem;
+}
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+table th {
+  background: var(--background);
+  font-weight: 700;
+}
 /*------------responsive layout------------*/
 
 @media (max-width: 700px) {
@@ -214,8 +377,8 @@ label {
     padding-right: 0;
     font-size: 1.5em;
   }
-  form {
-    margin-left: 2em;
+  h2 .aboutMeContent {
+    position: left;
   }
 }
 @media (max-width: 1200px) {
@@ -240,7 +403,13 @@ label {
   .nav-wrap {
     width: 100%;
   }
-  form {
-    margin-left: 4em;
+}
+
+@media (min-width: 700px) {
+  .aboutMeContent h2 {
+    text-align: left;
+  }
+  .nameIntroduction {
+    text-align: left;
   }
 }
