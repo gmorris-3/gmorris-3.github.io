@@ -216,6 +216,13 @@ img {
   margin: 0 auto;
   padding: 1em;
 }
+
+.project-video {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0.5rem auto 1rem auto;
+}
 /*-----------------table----------------*/
 
 table {
